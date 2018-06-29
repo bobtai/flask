@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sample</title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='image/favicon.ico') }}">
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='css/w3.css') }}">
+    </head>
+    <body>
+
+    <div class="w3-container center">
+        <h2>{{ title }}</h2>
+
+        <div class="w3-row">
+            <a href="javascript:void(0)" onclick="openCity(event, 'Taipei');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-red">Taipei</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openCity(event, 'London');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">London</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openCity(event, 'Paris');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Paris</div>
+            </a>
+            <a href="javascript:void(0)" onclick="openCity(event, 'Tokyo');">
+              <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Tokyo</div>
+            </a>
+        </div>
+
+        <div id="Taipei" class="w3-container city" style="display:block">
+            <h2>Taipei</h2>
+            <p>Taipei is the capital city of Taiwan.</p>
+        </div>
+
+        <div id="London" class="w3-container city" style="display:none">
+            <h2>London</h2>
+            <p>London is the capital city of England.</p>
+        </div>
+
+        <div id="Paris" class="w3-container city" style="display:none">
+            <h2>Paris</h2>
+            <p>Paris is the capital of France.</p>
+        </div>
+
+        <div id="Tokyo" class="w3-container city" style="display:none">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/sample.js') }}"></script>
+
+    </body>
+</html>
