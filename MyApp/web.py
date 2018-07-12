@@ -1,8 +1,22 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 from flask import render_template
 
 
 app = Flask(__name__)
+
+
+class Employee:
+    def __init__(self, e_id, e_name, participation_project):
+        self.e_id = e_id
+        self.e_name = e_name
+        self.participation_project = participation_project
+
+
+def get_employee(num):
+    e_id = 'id_' + str(num)
+    e_name = 'name_' + str(num)
+    ptcpt_project = ['A00' + str(num), 'B00' + str(num)]
+    return Employee(e_id, e_name, ptcpt_project)
 
 
 @app.route('/')
@@ -30,6 +44,24 @@ def sample(s_id):
                                title=titles[s_id])
     else:
         return "The number of id must be between 1 and 4."
+
+
+@app.route('/api/employee/<int:e_id>', methods=['GET'])
+def get_employee_by_get(e_id):
+    return jsonify(get_employee(e_id).__dict__)
+
+
+@app.route('/api/employee', methods=['POST'])
+def get_employee_by_post():
+    try:
+        # Setting force=True will ignore
+        # the request.headers.get('Content-Type') == 'application/json' check
+        # that flask does for you.
+        content = request.get_json(force=True)
+        e_id = content['e_id']
+        return jsonify(get_employee(e_id).__dict__)
+    except KeyError:
+        return jsonify({'result': 'KeyError'})
 
 
 if __name__ == '__main__':

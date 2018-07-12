@@ -1,7 +1,23 @@
-# Flask
-A simple flask web site.
-In this project, you can know the relationship of python, html, and other static file such as js, css and image.
-As well as you can also know how to deploy the project into apache on ubuntu.
+## Flask
+A simple flask web site.<br>
+You can understand how to deploy the project into apache on ubuntu.
+
+## Updated List
+
+### Version 1.0
+You can understand the relationship of python, html, and other static file such as js, css and image.<br>
+The following samples are available:<br>
+* http://127.0.0.1:5000/
+* http://127.0.0.1:5000/index
+* http://127.0.0.1:5000/sample/<int>
+
+
+### Version 2.0
+You can understand the development of api which return a json string with get or post method.<br>
+The following samples are available:<br>
+* http://127.0.0.1:5000/api/employee/<int> (GET)
+* http://127.0.0.1:5000/api/employee (POST)
+The post json string like this:`{"e_id": 1}`
 
 ## Environment
 
