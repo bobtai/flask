@@ -19,12 +19,12 @@ http://127.0.0.1:5000/sample/3
 ### Version 2.0
 You can understand the development of api which return a json string with get or post method.<br>
 The following samples are available:<br>
-* http://127.0.0.1:5000/api/employee/{int} (GET)
+* http://127.0.0.1:5000/api/employee/{int} (GET)<br>
 The examples:<br>
 http://127.0.0.1:5000/api/employee/1<br>
 http://127.0.0.1:5000/api/employee/66
 * http://127.0.0.1:5000/api/employee (POST)<br>
-The post json example:<br>
+The post json examples:<br>
 {"e_id": 1}<br>
 {"e_id": 66}
 
