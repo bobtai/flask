@@ -9,15 +9,24 @@ You can understand the relationship of python, html, and other static file such 
 The following samples are available:<br>
 * http://127.0.0.1:5000/
 * http://127.0.0.1:5000/index
-* http://127.0.0.1:5000/sample/<int>
+* http://127.0.0.1:5000/sample/{int}<br>
+The examples:<br>
+http://127.0.0.1:5000/sample/1<br>
+http://127.0.0.1:5000/sample/3
+
 
 
 ### Version 2.0
 You can understand the development of api which return a json string with get or post method.<br>
 The following samples are available:<br>
 * http://127.0.0.1:5000/api/employee/{int} (GET)
+The examples:<br>
+http://127.0.0.1:5000/api/employee/1<br>
+http://127.0.0.1:5000/api/employee/66
 * http://127.0.0.1:5000/api/employee (POST)<br>
-The post json string is like this:`{"e_id": 1}`
+The post json example:<br>
+{"e_id": 1}<br>
+{"e_id": 66}
 
 ## Environment
 
