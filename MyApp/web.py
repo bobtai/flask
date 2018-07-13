@@ -13,9 +13,10 @@ class Employee:
 
 
 def get_employee(num):
-    e_id = 'id_' + str(num)
-    e_name = 'name_' + str(num)
-    ptcpt_project = ['A00' + str(num), 'B00' + str(num)]
+    str_num = str(num)
+    e_id = 'id_' + str_num
+    e_name = 'name_' + str_num
+    ptcpt_project = ['A00' + str_num, 'B00' + str_num]
     return Employee(e_id, e_name, ptcpt_project)
 
 
@@ -44,6 +45,16 @@ def sample(s_id):
                                title=titles[s_id])
     else:
         return "The number of id must be between 1 and 4."
+
+
+@app.route('/employee', methods=['GET', 'POST'])
+def get_employee_by_form():
+    if request.method == 'GET':
+        return render_template("form.html")
+    else:
+        req_id = int(request.form['id'])
+        return render_template("form.html",
+                               json_str=get_employee(req_id).__dict__)
 
 
 @app.route('/api/employee/<int:e_id>', methods=['GET'])
