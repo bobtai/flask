@@ -34,11 +34,16 @@ The post json examples:<br>
 ### Development
 * Python 3.5.2
 * Flask 1.0.2
+* Expiringdict 1.1.4<br>
+If you want to use `cache` in flask, please refer to this [tutorial](https://bobtai.gitbooks.io/mynotes/content/Python/expiringdict.html).
+* Celery 4.2.0<br>
+If you want to use `multiprocessing` in flask, please refer to this [tutorial](https://bobtai.gitbooks.io/mynotes/content/Python/celery.html).
+
 
 ### Deployment
 * Ubuntu 16.04.3 LTS
 * Apache 2.4.18
 * mod_wsgi 4.3.0
 
-There is a tutorial which teach you how to deploy the project into apache on ubuntu.
+There is a tutorial which teach you how to deploy the project into apache on ubuntu.<br>
 Please refer to this [gitbook](https://bobtai.gitbooks.io/mynotes/content/AWS/flask_apache.html) to get more deployment tutorial.
