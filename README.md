@@ -46,4 +46,4 @@ If you want to use `multiprocessing` in flask, please refer to this [tutorial](h
 * mod_wsgi 4.3.0
 
 There is a tutorial which teach you how to deploy the project into apache on ubuntu.<br>
-Please refer to this [gitbook](https://bobtai.gitbooks.io/mynotes/content/AWS/flask_apache.html) to get more deployment tutorial.
+Please refer to this [gitbook](https://bobtai.gitbooks.io/mynotes/content/Deployment/flask_apache_ubu.html) to get more deployment tutorial.
